@@ -11,7 +11,7 @@
         <meta name="keywords" content="HTML, CSS, Bootstrap, jQuery, discos duros">
         <meta name="author" content="Manuel Trinidad Cerezo Bonilla">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Agregar artículo modificado - Addisdu</title>
+        <title>Artículo modificado - Addisdu</title>
         <!-- Mi hoja de estilos -->
         <link rel="stylesheet" type="text/css" href="css/estilosindex.css">
         <!-- Bootstrap en sí + Bootstrap social -->
@@ -26,7 +26,7 @@
         
         </script>
     </head>
-    <body>
+    <body style="background-color: lightblue">
     <%
       Class.forName("com.mysql.jdbc.Driver");
       Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/crud","root", "");
@@ -42,14 +42,17 @@
                            + "', precio=" + Float.valueOf(request.getParameter("precio"))
                            + " WHERE ID=" + request.getParameter("ID");
       s.execute(actualizacion);
-      out.println("<h1>Producto actualizado correctamente.</h1>");
       System.out.println(actualizacion);
       
       conexion.close();
     %>
     <br>
+    <h1 class="text-center">Producto actualizado correctamente.</h1>
+    <br>
+    <div class="text-center">
     <a href="index.jsp" class="btn btn-primary"><i class="fa fa-home" aria-hidden="true"></i> Volver a la página principal</a>
         <a href="tabla.jsp" class="btn btn-primary"><i class="fa fa-table" aria-hidden="true"></i> Volver atrás para ver los datos</a>
+    </div>
     <footer class="text-center">
                 <hr>
                 <p> Created by: Manuel Trinidad Cerezo Bonilla <br>

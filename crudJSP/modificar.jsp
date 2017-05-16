@@ -32,21 +32,8 @@
                 <label>ID: </label><input type="text" size="5" name="ID" value="<%= request.getParameter("ID") %>" readonly><br><br>
                 <label>Marca: </label><input type="text" size="20" name="marca" value="<%= request.getParameter("marca") %>"><br><br>
                 <label>Modelo: </label><input type="text" size="20" name="modelo" value="<%= request.getParameter("modelo") %>"><br><br>
-                <label>Tipo: </label><select name="tipo" value="<%= request.getParameter("tipo") %>">
-                                        <option value="Elige" selected>Elige</option>
-                                        <option value="Interno">Interno</option> 
-                                        <option value="Externo">Externo</option>
-                                        <option value="SSD">SSD</option>
-                                     </select><br><br>                    
-                <label>Almacenamiento: </label>
-                                    <select name="almacenamiento" value="<%= request.getParameter("almacenamiento") %>">
-                                        <option value="Elige" selected>Elige</option>
-                                        <option value="500GB">500GB</option> 
-                                        <option value="1TB">1TB</option>
-                                        <option value="2TB">2TB</option>
-                                        <option value="5TB">5TB</option>
-                                        <option value="10TB">10TB</option>
-                                     </select><br><br>
+                <label>Tipo: </label><input type="text" size="15" name="tipo" value="<%= request.getParameter("tipo") %>"><br><br>                    
+                <label>Almacenamiento: </label><input type="text" size="15" name="almacenamiento" value="<%= request.getParameter("almacenamiento") %>"><br><br>
                 <label>Conexión: </label><input type="text" size="20" name="conexion" value="<%= request.getParameter("conexion") %>"><br><br>
                 <label>Precio: </label><input type="text" size="10" name="precio" value="<%= Float.valueOf(request.getParameter("precio")) %>">
                 <hr>

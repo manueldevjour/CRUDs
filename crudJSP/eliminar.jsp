@@ -26,7 +26,7 @@
         
         </script>
     </head>
-    <body style="background-color: red;">
+    <body style="background-color: lightcoral">
         <div class="container text-center"><h1> Artículo eliminado de la base de datos</h1>
         <%
             Class.forName("com.mysql.jdbc.Driver");

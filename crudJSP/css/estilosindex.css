@@ -1,27 +1,19 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 03-may-2017, 9:56:09
-    Author     : 6000851
-*/
-
 #titulo {
     font-family: 'Inknut Antiqua', serif;
     font-size: 70px ;
     color: gold;
 }
-.error {
-    background-color: red;
-}
-
-.success {
-    background-color: green;
-}
+ 
 #titulotabla {
-    font-family: 'Inknut Antiqua', serif;
+    background: url(http://apod.nasa.gov/apod/image/0603/coma_misti.jpg) -80px -80px;
+  color: red;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-weight: bold;
+  font-size: 75px;
+  font-family: 'Inknut Antiqua', arial, helvetica;
+  width: 450px;
+  margin: 50px auto;
 }
 
 label {
@@ -68,3 +60,4 @@ footer {
 #twitter, #linkedin, #telegram, #github {
     font-size:20px;
 }
+

@@ -26,7 +26,7 @@
         
         </script>
     </head>
-    <body>
+    <body style="background-color: lightgreen">
         <div class="container text-center">
         <%
           Class.forName("com.mysql.jdbc.Driver");

@@ -24,12 +24,11 @@
         <!-- Script para jQuery -->
         <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
         <!-- Latest compiled Javascript from Bootstrap -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         
-        </script>
     </head>
     <body>
-        <h1 id="titulotabla" class="text-center"> Listado de discos - Addisdu </h1>
+        <a href="index.jsp"><h1 id="titulotabla" href="index.jsp"> Listado de discos - Addisdu </h1></a>
         <br><br><br>
         <%
             Class.forName("com.mysql.jdbc.Driver");
@@ -39,38 +38,34 @@
             ResultSet listado = s.executeQuery ("SELECT * FROM info ORDER BY ID");
         %>
         <div class="container">
-        <table class="table table-hover">
+            <div class="text-center">
+            <a href="#mitabla" class="btn btn-primary text-center"><i class="fa fa-go" aria-hidden="true"></i> Ver la tabla</a>
+            </div>
+            <br><br>
+            <div class="panel panel-primary text-center">
+                <div class="panel-heading">
+                    Instrucciones de uso de Addisdu
+                </div>
+                <div class="panel-body">
+                    1 - La ID no se puede repetir<br>
+                    2 - Todos los campos deben de estar completos<br>
+                    3 - Puedes añadir todos los discos duros que desees<br>
+                    4 - Como administrador de esta base de datos, tienes total<br>
+                      libertad de agregar, modificar o eliminar la información.
+                </div>
+            </div>
+            <br><br>
+        <table id="mitabla" class="table table-hover">
             <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Marca</th>
-                    <th>Modelo</th>
-                    <th>Tipo</th>
-                    <th>Almacenamiento</th>
-                    <th>Conexión</th>
-                    <th>Precio</th>
-                </tr>
                 <tr class="success">
                     <form name="agregar" action="agregar.jsp" method="get">
-                        <td><input type="text" name="ID" size="4"></td>
-                        <td><input type="text" name="marca" size="20"></td>
-                        <td><input type="text" name="modelo" size="20"></td>
-                        <td><select name="tipo">
-                                <option value="Elige" selected>Elige</option>
-                                <option value="Interno">Interno</option> 
-                                <option value="Externo">Externo</option>
-                                <option value="SSD">SSD</option>
-                            </select></td>
-                        <td><select name="almacenamiento">
-                                <option value="Elige" selected>Elige</option>
-                                <option value="500GB">500GB</option> 
-                                <option value="1TB">1TB</option>
-                                <option value="2TB">2TB</option>
-                                <option value="5TB">5TB</option>
-                                <option value="10TB">10TB</option>
-                            </select></td>
-                        <td><input type="text" name="conexion" size="20"></td>
-                        <td><input type="text" name="precio" size="5"></td>
+                        <td><input type="text" name="ID" size="4" placeholder="ID"></td>
+                        <td><input type="text" name="marca" size="20" placeholder="Marca"></td>
+                        <td><input type="text" name="modelo" size="20" placeholder="Modelo"></td>
+                        <td><input type="text" name="tipo" size="15" placeholder="Tipo"></td>
+                        <td><input type="text" name="almacenamiento" size="15" placeholder="Almacenamiento"></td>
+                        <td><input type="text" name="conexion" size="20" placeholder="Conexion"></td>
+                        <td><input type="text" name="precio" size="5" placeholder="Precio"></td>
                         <td><button id="botonagregar" type="submit" value="Agregar" class="btn btn-primary"><i class="fa fa-plus-square"></i> Agregar</button></td>
                     </form>
                 </tr>
@@ -113,8 +108,10 @@
                     %>
             </tbody>
         </table>
+            <br><br>
             <a href="index.jsp" class="btn btn-primary"><i class="fa fa-home" aria-hidden="true"></i> Volver a la página principal</a>
         </div>
+            <br><br>
             
     </body>
 </html>
