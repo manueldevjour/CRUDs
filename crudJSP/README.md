@@ -4,7 +4,7 @@
 > Proyecto de clase de las asignaturas de Programación y Sistemas Informáticos
 
 # 👽 Página principal
-![](capturas/index.png)
+![Página de inicio](capturas/index.png)
 
 <br>
 
